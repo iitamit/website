@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>IK×Seoul — Admin Login</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --white:#ffffff; --off:#F7F6F2; --ink:#141414; --muted:#6B6B6B;
+  --border:#E5E4DF; --rose:#E8526A; --rose-soft:#FFF0F2; --rose-mid:#F4C5CD;
+  --rose-dark:#B5284A;
+}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--off);
+  color:var(--ink);
+  display:flex;
+  min-height:100vh;
+  align-items:center;
+  justify-content:center;
+}
+.login-container{
+  width:100%;
+  max-width:400px;
+  padding:20px;
+}
+.dash-brand{display:flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;margin-bottom:30px;}
+.dash-logo-mark{width:44px;height:44px;background:var(--ink);border-radius:50%;display:flex;align-items:center;justify-content:center;}
+.dash-logo-mark span{font-family:'DM Serif Display',serif;font-style:italic;font-size:16px;color:var(--white);}
+.dash-logo-text{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);letter-spacing:-.01em;}
+.dash-logo-text b{color:var(--rose);font-weight:400;}
+
+.form-card{background:var(--white);border:1px solid var(--border);border-radius:20px;padding:32px;box-shadow:0 12px 24px rgba(0,0,0,0.04);}
+.card-header{text-align:center;margin-bottom:24px;}
+.card-title{font-family:'DM Serif Display',serif;font-size:20px;font-weight:600;}
+
+.form-group{margin-bottom:20px;}
+.form-group label{display:block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--ink);margin-bottom:8px;}
+.form-control{width:100%;background:var(--off);border:1px solid var(--border);border-radius:10px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14px;color:var(--ink);outline:none;transition:all .2s;}
+.form-control:focus{border-color:var(--rose);background:var(--white);box-shadow:0 0 0 3px var(--rose-soft);}
+
+.btn-publish{width:100%;background:var(--ink);color:var(--white);border:none;padding:12px;border-radius:100px;font-size:14px;font-weight:600;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.1);transition:background .2s;}
+.btn-publish:hover{background:var(--rose);}
+.error-msg{color:var(--rose);font-size:13px;text-align:center;margin-bottom:16px;font-weight:500;}
+</style>
+</head>
+<body>
+
+<div class="login-container">
+  <a class="dash-brand" href="/">
+    <div class="dash-logo-mark"><span>IK</span></div>
+    <span class="dash-logo-text">IK<b>×</b>Seoul</span>
+  </a>
+  
+  <div class="form-card">
+    <div class="card-header"><span class="card-title">CMS Control Center</span></div>
+    
+    {% if form.errors %}
+      <div class="error-msg">Your username and password didn't match. Please try again.</div>
+    {% endif %}
+
+    <form method="post" action="{% url 'dashboard:login' %}">
+      {% csrf_token %}
+      <div class="form-group">
+        <label>Username</label>
+        <input type="text" name="username" class="form-control" required autofocus autocomplete="username" />
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" name="password" class="form-control" required autocomplete="current-password" />
+      </div>
+      <input type="hidden" name="next" value="{{ next|default:'' }}" />
+      <button class="btn-publish" type="submit">Secure Login</button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

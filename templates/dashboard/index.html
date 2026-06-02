@@ -153,7 +153,11 @@ textarea.form-control{resize:vertical;min-height:90px;}
   <header class="top-bar">
     <div class="page-title">Control Panel &mdash; <span id="current-panel-title">Overview</span></div>
     <div class="top-actions">
-      <a class="btn-view-site" href="http://localhost:8000/" target="_blank">Preview Live Site</a>
+      <form action="{% url 'dashboard:logout' %}" method="post" style="display:inline;">
+        {% csrf_token %}
+        <button type="submit" class="btn-view-site" style="color: var(--rose); border-color: var(--rose-soft); margin-right: 8px; background: transparent;">Logout</button>
+      </form>
+      <a class="btn-view-site" href="/" target="_blank">Preview Live Site</a>
       <button class="btn-publish" type="button" onclick="publishActivePanel()">Publish Changes</button>
     </div>
   </header>

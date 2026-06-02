@@ -1,4 +1,5 @@
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.http import Http404
 from django.shortcuts import get_object_or_404, redirect, render
 from django.views.decorators.http import require_POST
@@ -10,6 +11,7 @@ def _field(request, name, default=""):
     return request.POST.get(name, default).strip()
 
 
+@login_required
 def index(request):
     return render(
         request,
@@ -26,6 +28,7 @@ def index(request):
     )
 
 
+@login_required
 @require_POST
 def save_settings(request):
     settings = SiteSettings.load()
@@ -39,6 +42,7 @@ def save_settings(request):
     return redirect("dashboard:index")
 
 
+@login_required
 @require_POST
 def add_story(request):
     Story.objects.create(
@@ -54,6 +58,7 @@ def add_story(request):
     return redirect("dashboard:index")
 
 
+@login_required
 @require_POST
 def add_fashion_look(request):
     FashionLook.objects.create(
@@ -70,6 +75,7 @@ def add_fashion_look(request):
     return redirect("dashboard:index")
 
 
+@login_required
 @require_POST
 def add_chart_entry(request):
     chart = _field(request, "chart")
@@ -88,6 +94,7 @@ def add_chart_entry(request):
     return redirect("dashboard:index")
 
 
+@login_required
 @require_POST
 def add_video(request):
     Video.objects.create(
@@ -100,6 +107,7 @@ def add_video(request):
     return redirect("dashboard:index")
 
 
+@login_required
 @require_POST
 def add_drama(request):
     Drama.objects.create(
@@ -121,6 +129,7 @@ MODEL_MAP = {
 }
 
 
+@login_required
 @require_POST
 def delete_item(request, model_name, pk):
     model = MODEL_MAP.get(model_name)
