@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>IK×Seoul — Itishree Khadiratna · K-Pop, BTS, BLACKPINK & Korean Culture 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --white:#ffffff; --off:#F7F6F2; --ink:#141414; --muted:#6B6B6B;
+  --border:#E5E4DF; --rose:#E8526A; --rose-soft:#FFF0F2; --rose-mid:#F4C5CD;
+  --rose-dark:#B5284A;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--ink);overflow-x:hidden;}
+
+/* ══════════════ NAV ══════════════ */
+.nav-outer{position:sticky;top:0;z-index:300;padding:14px 32px;background:rgba(255,255,255,0.90);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:16px;}
+.nav-logo{display:flex;align-items:center;gap:9px;text-decoration:none;flex-shrink:0;}
+.nav-logo-mark{width:38px;height:38px;background:var(--ink);border-radius:50%;display:flex;align-items:center;justify-content:center;}
+.nav-logo-mark span{font-family:'DM Serif Display',serif;font-style:italic;font-size:13px;color:#fff;}
+.nav-logo-text{font-family:'DM Serif Display',serif;font-size:20px;letter-spacing:-.01em;color:var(--ink);}
+.nav-logo-text b{color:var(--rose);font-weight:400;}
+.nav-pill{flex:1;display:flex;align-items:center;justify-content:center;background:var(--off);border:1px solid var(--border);border-radius:100px;padding:5px 6px;gap:2px;overflow:hidden;}
+.nav-pill a{font-size:13px;font-weight:500;color:var(--muted);padding:8px 14px;border-radius:100px;text-decoration:none;white-space:nowrap;transition:all .2s;}
+.nav-pill a:hover,.nav-pill a.active{background:var(--white);color:var(--ink);box-shadow:0 1px 6px rgba(0,0,0,.09);}
+.nav-right{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.nav-search{background:var(--off);border:1px solid var(--border);border-radius:100px;padding:8px 16px;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--ink);outline:none;width:150px;transition:width .3s;}
+.nav-search:focus{width:200px;border-color:var(--rose);}
+.nav-search::placeholder{color:#bbb;}
+.nav-subscribe{background:var(--ink);color:#fff;border:none;border-radius:100px;padding:10px 22px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:background .2s;white-space:nowrap;}
+.nav-subscribe:hover{background:var(--rose);}
+/* Mobile nav toggle */
+.nav-hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px;flex-direction:column;gap:5px;}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:all .3s;}
+.mobile-menu{display:none;position:fixed;inset:0;background:rgba(255,255,255,.97);z-index:400;flex-direction:column;align-items:center;justify-content:center;gap:28px;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{font-family:'DM Serif Display',serif;font-size:28px;color:var(--ink);text-decoration:none;transition:color .2s;}
+.mobile-menu a:hover{color:var(--rose);}
+.mobile-menu-close{position:absolute;top:24px;right:28px;background:none;border:none;font-size:28px;cursor:pointer;color:var(--muted);}
+
+/* ══════════════ BREAKING NEWS ══════════════ */
+.breaking-band{background:var(--rose);padding:11px 32px;}
+.breaking-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:14px;}
+.breaking-tag{background:rgba(0,0,0,.18);color:#fff;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:4px 12px;border-radius:100px;white-space:nowrap;flex-shrink:0;display:flex;align-items:center;gap:5px;}
+.breaking-live-dot{width:6px;height:6px;background:#fff;border-radius:50%;animation:blink 1.4s infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:.25;}}
+.breaking-scroll{overflow:hidden;flex:1;}
+.breaking-track{display:flex;white-space:nowrap;animation:bticker 28s linear infinite;}
+.breaking-item{font-size:12px;font-weight:600;color:#fff;padding:0 36px;letter-spacing:.02em;}
+@keyframes bticker{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+/* ══════════════ TICKER ══════════════ */
+.ticker-wrap{overflow:hidden;background:var(--ink);padding:10px 0;}
+.ticker-track{display:flex;white-space:nowrap;animation:tticker 42s linear infinite;}
+.ticker-item{font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;padding:0 32px;color:rgba(255,255,255,.75);}
+.ticker-item em{color:var(--rose);font-style:normal;margin-right:5px;}
+@keyframes tticker{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+/* ══════════════ HERO ══════════════ */
+.hero{padding:80px 32px 0;text-align:center;background:var(--white);position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:800px;height:600px;background:radial-gradient(ellipse at center,rgba(232,82,106,.06) 0%,transparent 68%);pointer-events:none;}
+/* Big editorial title — no badge, no subtitle as-was */
+.hero-eyeline{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:32px;}
+.hero-eyeline-line{width:48px;height:1px;background:var(--rose-mid);}
+.hero-eyeline-text{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--rose);}
+.hero-title{font-family:'DM Serif Display',serif;font-size:clamp(48px,8vw,96px);line-height:.98;letter-spacing:-.03em;color:var(--ink);max-width:820px;margin:0 auto 0;}
+.hero-title em{font-style:italic;color:var(--rose);}
+.hero-title-row2{display:block;font-size:clamp(28px,4.5vw,52px);letter-spacing:-.01em;color:var(--muted);font-weight:400;margin-top:10px;font-family:'DM Serif Display',serif;font-style:italic;}
+.hero-byline{margin:28px auto 0;max-width:480px;display:flex;align-items:center;justify-content:center;gap:10px;}
+.hero-byline-divider{width:1px;height:28px;background:var(--border);}
+.hero-byline-name{font-size:13px;font-weight:600;color:var(--ink);}
+.hero-byline-role{font-size:12px;color:var(--muted);}
+.hero-stats{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin:36px 0;}
+.stat-pill{display:flex;align-items:center;gap:9px;background:var(--white);border:1px solid var(--border);border-radius:100px;padding:8px 18px;box-shadow:0 2px 10px rgba(0,0,0,.05);}
+.stat-icon{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;}
+.si-rose{background:var(--rose-soft);color:var(--rose);}
+.si-green{background:#EDFAF4;color:#1A9E6A;}
+.si-blue{background:#EEF4FF;color:#3B7DD8;}
+.si-purple{background:#F3EEFF;color:#7C3AED;}
+.stat-val{font-size:14px;font-weight:700;color:var(--ink);}
+.stat-lbl{font-size:12px;color:var(--muted);}
+.hero-btns{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:60px;flex-wrap:wrap;}
+.btn-filled{background:var(--ink);color:#fff;border:none;border-radius:100px;padding:13px 28px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer;transition:background .2s;}
+.btn-filled:hover{background:var(--rose);}
+.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--border);border-radius:100px;padding:12px 26px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;cursor:pointer;transition:all .2s;}
+.btn-ghost:hover{border-color:var(--ink);}
+.btn-rose{background:var(--rose);color:#fff;border:none;border-radius:100px;padding:12px 24px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;cursor:pointer;transition:background .2s;}
+.btn-rose:hover{background:var(--rose-dark);}
+/* mosaic */
+.mosaic{display:flex;gap:12px;justify-content:center;align-items:flex-end;padding:0 20px;}
+.mc{border-radius:20px;overflow:hidden;flex-shrink:0;position:relative;}
+.mc svg{display:block;}
+.mc-label{position:absolute;bottom:10px;left:10px;right:10px;background:rgba(10,10,10,.68);backdrop-filter:blur(6px);border-radius:8px;padding:6px 10px;color:#fff;font-size:10px;font-weight:600;}
+
+/* ══════════════ SECTION HELPERS ══════════════ */
+.sec{max-width:1100px;margin:0 auto;padding:72px 32px 0;}
+.sec-label{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--rose);margin-bottom:14px;}
+.sec-title{font-family:'DM Serif Display',serif;font-size:clamp(28px,3.8vw,44px);line-height:1.1;color:var(--ink);margin-bottom:10px;}
+.sec-title em{font-style:italic;}
+.sec-sub{font-size:15px;color:var(--muted);line-height:1.7;max-width:500px;}
+.divider{max-width:1100px;margin:72px auto 0;padding:0 32px;}
+.divider hr{border:none;border-top:1px solid var(--border);}
+
+/* ══════════════ ARTIST STRIP ══════════════ */
+.artists-strip{max-width:1100px;margin:0 auto;padding:0 32px;display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px;}
+.artists-strip::-webkit-scrollbar{display:none;}
+.artist-chip{display:flex;align-items:center;gap:8px;background:var(--white);border:1px solid var(--border);border-radius:100px;padding:7px 15px;cursor:pointer;transition:all .22s;white-space:nowrap;flex-shrink:0;}
+.artist-chip:hover{border-color:var(--rose);background:var(--rose-soft);}
+.artist-chip-dot{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;flex-shrink:0;}
+.artist-chip span{font-size:12px;font-weight:600;color:var(--ink);}
+
+/* ══════════════ CATEGORIES ══════════════ */
+.cats{max-width:1100px;margin:0 auto;padding:20px 32px 24px;display:flex;gap:8px;flex-wrap:wrap;}
+.cat{font-size:12px;font-weight:600;color:var(--muted);background:var(--off);border:1px solid var(--border);border-radius:100px;padding:7px 16px;cursor:pointer;transition:all .2s;}
+.cat:hover,.cat.on{background:var(--ink);color:#fff;border-color:var(--ink);}
+
+/* ══════════════ ARTICLES ══════════════ */
+.articles{max-width:1100px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.card{background:var(--white);border:1px solid var(--border);border-radius:20px;padding:28px;cursor:pointer;transition:all .25s;}
+.card:hover{border-color:#c8c8c4;box-shadow:0 6px 28px rgba(0,0,0,.07);transform:translateY(-3px);}
+.card.wide{grid-column:1/-1;display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:center;}
+.card-cat{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--rose);margin-bottom:12px;}
+.card-title{font-family:'DM Serif Display',serif;font-size:20px;line-height:1.25;color:var(--ink);margin-bottom:12px;}
+.card-title-lg{font-size:28px;}
+.card-excerpt{font-size:14px;color:var(--muted);line-height:1.75;margin-bottom:14px;}
+.card-meta{font-size:12px;color:#bbb;display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
+.card-meta-dot{color:#ddd;}
+.card-img{background:var(--off);border-radius:14px;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.read-btn{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--rose);background:none;border:none;cursor:pointer;padding:0;margin-top:14px;transition:gap .2s;}
+.read-btn:hover{gap:10px;}
+.card-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px;}
+.card-tag{font-size:10px;font-weight:700;padding:3px 10px;border-radius:100px;background:var(--rose-soft);color:var(--rose);letter-spacing:.05em;}
+.card-tag.blue{background:#EEF4FF;color:#3B7DD8;}
+.card-tag.purple{background:#F3EEFF;color:#7C3AED;}
+.card-tag.green{background:#EDFAF4;color:#1A9E6A;}
+
+/* ══════════════ FASHION SECTION ══════════════ */
+.fashion-section{padding:72px 0;background:var(--off);overflow:hidden;}
+.fashion-header{max-width:1100px;margin:0 auto;padding:0 32px;display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:36px;flex-wrap:wrap;gap:16px;}
+/* Track with fade edges */
+.fashion-track-wrap{overflow:hidden;position:relative;}
+.fashion-track-wrap::before,.fashion-track-wrap::after{content:'';position:absolute;top:0;bottom:0;width:80px;z-index:5;pointer-events:none;}
+.fashion-track-wrap::before{left:0;background:linear-gradient(to right,var(--off),transparent);}
+.fashion-track-wrap::after{right:0;background:linear-gradient(to left,var(--off),transparent);}
+.fashion-track{display:flex;gap:20px;padding:8px 60px 20px;animation:fashionScroll 38s linear infinite;width:max-content;}
+.fashion-track.paused{animation-play-state:paused;}
+@keyframes fashionScroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+.fashion-card{width:230px;flex-shrink:0;cursor:pointer;}
+.fashion-card-img{width:230px;height:310px;border-radius:18px;overflow:hidden;display:flex;align-items:center;justify-content:center;position:relative;transition:transform .3s;}
+.fashion-card:hover .fashion-card-img{transform:scale(1.025);}
+.fashion-card-emoji{font-size:60px;line-height:1;}
+.fashion-card-badge{position:absolute;top:12px;left:12px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:100px;}
+.fc-viral{background:var(--rose);color:#fff;}
+.fc-new{background:#1A9E6A;color:#fff;}
+.fc-beauty{background:#7C3AED;color:#fff;}
+.fashion-card-info{padding:12px 2px 6px;}
+.fashion-card-artist{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--rose);margin-bottom:4px;}
+.fashion-card-name{font-family:'DM Serif Display',serif;font-size:15px;line-height:1.25;color:var(--ink);margin-bottom:3px;}
+.fashion-card-brand{font-size:11px;color:var(--muted);}
+
+/* Fashion modal — fixed center overlay */
+.fashion-modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:500;align-items:center;justify-content:center;padding:20px;}
+.fashion-modal-overlay.open{display:flex;}
+.fashion-modal{background:var(--white);border-radius:24px;padding:28px;max-width:380px;width:100%;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.18);animation:modalIn .25s ease;}
+@keyframes modalIn{from{opacity:0;transform:scale(.94) translateY(8px);}to{opacity:1;transform:scale(1) translateY(0);}}
+.fm-close{position:absolute;top:16px;right:16px;width:28px;height:28px;border:none;background:var(--off);border-radius:50%;cursor:pointer;font-size:14px;color:var(--muted);display:flex;align-items:center;justify-content:center;transition:background .2s;}
+.fm-close:hover{background:var(--border);}
+.fm-artist{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--rose);margin-bottom:6px;}
+.fm-title{font-family:'DM Serif Display',serif;font-size:22px;color:var(--ink);line-height:1.2;margin-bottom:12px;}
+.fm-pills{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:14px;}
+.fm-pill{font-size:11px;font-weight:600;padding:4px 12px;border-radius:100px;background:var(--rose-soft);color:var(--rose);}
+.fm-pill.dark{background:var(--off);color:var(--muted);}
+.fm-desc{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:16px;}
+.fm-where{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;}
+.fm-btn{display:block;width:100%;text-align:center;text-decoration:none;border:none;border-radius:100px;padding:12px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;margin-bottom:8px;}
+.fm-btn.primary{background:var(--ink);color:#fff;}
+.fm-btn.primary:hover{background:var(--rose);}
+.fm-btn.secondary{background:var(--off);color:var(--ink);}
+.fm-btn.secondary:hover{background:var(--border);}
+
+/* ══════════════ AWARDS BENTO ══════════════ */
+.awards-bento{max-width:1100px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.award-card{background:var(--ink);border-radius:20px;padding:26px;cursor:pointer;transition:all .25s;position:relative;overflow:hidden;}
+.award-card::before{content:'';position:absolute;top:-40px;right:-40px;width:110px;height:110px;background:radial-gradient(circle,rgba(232,82,106,.28),transparent 70%);pointer-events:none;}
+.award-card:hover{transform:translateY(-3px);box-shadow:0 10px 32px rgba(0,0,0,.18);}
+.award-card.wide{grid-column:1/3;}
+.award-icon{font-size:28px;margin-bottom:12px;display:block;}
+.award-name{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);margin-bottom:8px;}
+.award-title{font-family:'DM Serif Display',serif;font-size:18px;color:#fff;line-height:1.25;margin-bottom:7px;}
+.award-title em{font-style:italic;color:var(--rose-mid);}
+.award-meta{font-size:11px;color:rgba(255,255,255,.4);}
+.award-counter{font-family:'DM Serif Display',serif;font-size:48px;color:var(--rose);line-height:1;}
+.award-counter-label{font-size:11px;color:rgba(255,255,255,.45);margin-top:4px;}
+.award-list{display:flex;flex-direction:column;gap:9px;margin-top:12px;}
+.award-list-item{display:flex;align-items:center;gap:9px;font-size:12px;color:rgba(255,255,255,.65);}
+.award-list-dot{width:5px;height:5px;background:var(--rose);border-radius:50%;flex-shrink:0;}
+
+/* ══════════════ CHARTS ══════════════ */
+.charts-grid{max-width:1100px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.chart-card{background:var(--white);border:1px solid var(--border);border-radius:20px;padding:26px;}
+.chart-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;}
+.chart-head-title{font-family:'DM Serif Display',serif;font-size:17px;color:var(--ink);}
+.chart-badge{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:100px;background:var(--rose-soft);color:var(--rose);}
+.chart-badge.live{background:#EDFAF4;color:#1A9E6A;}
+.chart-row{display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid var(--off);}
+.chart-row:last-child{border-bottom:none;}
+.chart-rank{font-family:'DM Serif Display',serif;font-size:18px;color:var(--rose-mid);width:24px;flex-shrink:0;text-align:center;}
+.chart-icon{width:38px;height:38px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+.chart-info{flex:1;min-width:0;}
+.chart-song{font-size:13px;font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.chart-artist{font-size:11px;color:var(--muted);}
+.chart-stat{font-size:11px;font-weight:700;color:var(--muted);text-align:right;flex-shrink:0;white-space:nowrap;}
+.chart-up{color:#1A9E6A;}
+.chart-bar-wrap{width:60px;height:3px;background:var(--off);border-radius:2px;overflow:hidden;flex-shrink:0;}
+.chart-bar{height:3px;background:linear-gradient(90deg,var(--rose),#ff9ab2);border-radius:2px;}
+
+/* ══════════════ VIDEO ══════════════ */
+.video-section{background:var(--off);padding:72px 32px;margin-top:0;}
+.video-inner{max-width:1100px;margin:0 auto;}
+.video-top{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:32px;}
+.live-badge{display:inline-flex;align-items:center;gap:7px;background:var(--rose);color:#fff;border-radius:100px;padding:7px 16px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;}
+.live-dot{width:6px;height:6px;background:#fff;border-radius:50%;animation:blink 1.4s infinite;}
+.video-layout{display:grid;grid-template-columns:240px 1fr;gap:18px;align-items:start;}
+.vid-list{display:flex;flex-direction:column;gap:10px;}
+.vid-item{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:14px;cursor:pointer;transition:all .22s;}
+.vid-item:hover,.vid-item.sel{border-color:var(--rose);box-shadow:0 2px 12px rgba(232,82,106,.13);}
+.vid-play{width:26px;height:26px;background:var(--rose-soft);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:8px;}
+.vid-play svg{width:9px;height:9px;fill:var(--rose);margin-left:2px;}
+.vid-cat{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--rose);margin-bottom:4px;}
+.vid-title{font-family:'DM Serif Display',serif;font-size:13px;line-height:1.35;color:var(--ink);margin-bottom:3px;}
+.vid-meta{font-size:11px;color:#bbb;}
+.vid-player{border-radius:18px;overflow:hidden;background:#111;}
+.vid-player iframe{width:100%;height:340px;display:block;border:none;}
+
+/* ══════════════ K-DRAMA ══════════════ */
+.kdrama-grid{max-width:1100px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.kdrama-card{background:var(--white);border:1px solid var(--border);border-radius:16px;overflow:hidden;cursor:pointer;transition:all .25s;}
+.kdrama-card:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(0,0,0,.09);}
+.kdrama-thumb{height:140px;display:flex;align-items:center;justify-content:center;font-size:40px;}
+.kdrama-body{padding:14px;}
+.kdrama-status{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px;}
+.kdrama-status.airing{color:#1A9E6A;}
+.kdrama-status.upcoming{color:#3B7DD8;}
+.kdrama-status.completed{color:var(--muted);}
+.kdrama-title{font-family:'DM Serif Display',serif;font-size:14px;line-height:1.3;color:var(--ink);margin-bottom:5px;}
+.kdrama-meta{font-size:11px;color:var(--muted);}
+
+/* ══════════════ THREE COL ══════════════ */
+.three{max-width:1100px;margin:0 auto;padding:72px 32px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.tc{background:var(--white);border:1px solid var(--border);border-radius:20px;padding:28px;cursor:pointer;transition:all .25s;}
+.tc:hover{border-color:#c8c8c4;box-shadow:0 6px 28px rgba(0,0,0,.07);transform:translateY(-3px);}
+.tc-num{font-family:'DM Serif Display',serif;font-size:48px;color:var(--rose-mid);line-height:1;margin-bottom:10px;}
+.tc-cat{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--rose);margin-bottom:8px;}
+.tc-title{font-family:'DM Serif Display',serif;font-size:18px;line-height:1.3;color:var(--ink);margin-bottom:9px;}
+.tc-text{font-size:13px;color:var(--muted);line-height:1.75;}
+
+/* ══════════════ ABOUT ══════════════ */
+.about-wrap{max-width:1100px;margin:0 auto;padding:0 32px 72px;}
+.about-grid{display:grid;grid-template-columns:1fr 1.9fr;gap:36px;align-items:center;}
+.about-dark{background:var(--ink);border-radius:24px;padding:40px 34px;display:flex;flex-direction:column;gap:20px;}
+.about-name{font-family:'DM Serif Display',serif;font-size:36px;color:#fff;line-height:1.0;}
+.about-name em{font-style:italic;color:var(--rose-mid);}
+.about-handle{font-size:12px;color:rgba(255,255,255,.38);letter-spacing:.06em;margin-top:4px;}
+.about-tags{display:flex;flex-wrap:wrap;gap:6px;}
+.a-tag{font-size:11px;font-weight:600;padding:5px 12px;border-radius:100px;border:1px solid rgba(255,255,255,.13);color:rgba(255,255,255,.55);cursor:pointer;transition:all .2s;}
+.a-tag:hover,.a-tag.hot{background:var(--rose);border-color:var(--rose);color:#fff;}
+.about-quote{font-family:'DM Serif Display',serif;font-style:italic;font-size:25px;line-height:1.25;color:var(--ink);margin-bottom:16px;}
+.about-body{font-size:15px;color:var(--muted);line-height:1.85;margin-bottom:24px;}
+.chips{display:flex;flex-wrap:wrap;gap:7px;}
+.chip{font-size:11px;font-weight:600;padding:5px 13px;border-radius:100px;border:1.5px solid var(--border);color:var(--muted);cursor:pointer;transition:all .2s;}
+.chip:hover{border-color:var(--ink);color:var(--ink);}
+
+/* ══════════════ NEWSLETTER ══════════════ */
+.nl-wrap{margin:0 32px 72px;border-radius:26px;background:var(--ink);padding:56px;position:relative;overflow:hidden;}
+.nl-wrap::before{content:'보라해';position:absolute;right:-20px;top:50%;transform:translateY(-50%);font-family:'DM Serif Display',serif;font-style:italic;font-size:160px;color:rgba(255,255,255,.022);white-space:nowrap;pointer-events:none;line-height:1;}
+.nl-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;position:relative;z-index:1;}
+.nl-eyebrow{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--rose);margin-bottom:12px;}
+.nl-title{font-family:'DM Serif Display',serif;font-size:34px;color:#fff;line-height:1.08;}
+.nl-title em{font-style:italic;color:var(--rose-mid);}
+.nl-tagline{font-size:14px;color:rgba(255,255,255,.42);line-height:1.7;margin-top:12px;}
+.nl-form{display:flex;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.13);border-radius:100px;padding:5px;overflow:hidden;margin-bottom:12px;}
+.nl-input{flex:1;padding:11px 18px;background:none;border:none;color:#fff;font-family:'DM Sans',sans-serif;font-size:14px;outline:none;}
+.nl-input::placeholder{color:rgba(255,255,255,.3);}
+.nl-btn{background:var(--rose);color:#fff;border:none;border-radius:100px;padding:11px 24px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:background .2s;white-space:nowrap;}
+.nl-btn:hover{background:#c73e55;}
+.nl-perks{display:flex;flex-direction:column;gap:8px;}
+.nl-perk{display:flex;align-items:center;gap:9px;font-size:13px;color:rgba(255,255,255,.5);}
+.nl-perk-dot{width:18px;height:18px;background:rgba(232,82,106,.18);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;color:var(--rose);flex-shrink:0;}
+.nl-note{font-size:11px;color:rgba(255,255,255,.22);margin-top:6px;}
+
+/* ══════════════ FOOTER ══════════════ */
+.footer{background:var(--off);border-top:1px solid var(--border);}
+.footer-top{max-width:1100px;margin:0 auto;padding:48px 32px 36px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;}
+.ft-logo{font-family:'DM Serif Display',serif;font-size:24px;color:var(--ink);margin-bottom:12px;}
+.ft-logo span{color:var(--rose);}
+.ft-tagline{font-size:13px;color:var(--muted);line-height:1.7;max-width:240px;margin-bottom:18px;}
+.ft-social{display:flex;gap:9px;}
+.ft-soc-btn{width:34px;height:34px;background:var(--white);border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--muted);cursor:pointer;transition:all .2s;text-decoration:none;}
+.ft-soc-btn:hover{background:var(--ink);color:#fff;border-color:var(--ink);}
+.ft-col-title{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);margin-bottom:14px;}
+.ft-links{display:flex;flex-direction:column;gap:9px;}
+.ft-links a{font-size:13px;color:var(--muted);text-decoration:none;transition:color .2s;}
+.ft-links a:hover{color:var(--rose);}
+.footer-bottom{border-top:1px solid var(--border);max-width:1100px;margin:0 auto;padding:16px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.footer-copy{font-size:12px;color:#bbb;}
+.footer-love{font-size:12px;color:#bbb;display:flex;align-items:center;gap:4px;}
+.footer-love span{color:var(--rose);}
+
+/* ══════════════ FADE ANIMATION ══════════════ */
+.fade-up{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease;}
+.fade-up.in{opacity:1;transform:none;}
+
+/* ══════════════ RESPONSIVE ══════════════ */
+@media(max-width:900px){
+  .nav-pill{display:none;}
+  .nav-search{display:none;}
+  .nav-hamburger{display:flex;}
+  .nav-inner{justify-content:space-between;}
+  .hero-title{font-size:clamp(38px,9vw,64px);}
+  .mosaic{gap:8px;}
+  .mc svg{width:100%;height:auto;}
+  .articles{grid-template-columns:1fr;}
+  .card.wide{grid-template-columns:1fr;gap:18px;}
+  .awards-bento{grid-template-columns:1fr 1fr;}
+  .award-card.wide{grid-column:1/-1;}
+  .charts-grid{grid-template-columns:1fr;}
+  .three{grid-template-columns:1fr;}
+  .three{padding:40px 20px;}
+  .kdrama-grid{grid-template-columns:1fr 1fr;}
+  .about-grid{grid-template-columns:1fr;}
+  .footer-top{grid-template-columns:1fr 1fr;gap:28px;}
+  .nl-inner{grid-template-columns:1fr;gap:28px;}
+  .nl-wrap{margin:0 20px 60px;padding:40px 28px;}
+  .sec{padding:52px 20px 0;}
+  .artists-strip{padding:0 20px;}
+  .cats{padding:16px 20px 20px;}
+  .articles{padding:0 20px;}
+  .awards-bento{padding:0 20px;}
+  .charts-grid{padding:0 20px;}
+  .kdrama-grid{padding:0 20px;}
+  .about-wrap{padding:0 20px 52px;}
+  .video-section{padding:52px 20px;}
+  .breaking-band{padding:10px 20px;}
+  .nav-outer{padding:12px 20px;}
+}
+@media(max-width:600px){
+  .hero{padding:56px 20px 0;}
+  .hero-title{font-size:clamp(32px,10vw,52px);}
+  .hero-btns{gap:8px;}
+  .btn-filled,.btn-ghost,.btn-rose{padding:11px 20px;font-size:13px;}
+  .mosaic{gap:6px;}
+  .mosaic .mc:nth-child(4){display:none;}
+  .awards-bento{grid-template-columns:1fr;}
+  .award-card.wide{grid-column:1;}
+  .kdrama-grid{grid-template-columns:1fr 1fr;}
+  .footer-top{grid-template-columns:1fr;}
+  .footer-bottom{flex-direction:column;align-items:flex-start;}
+  .video-layout{grid-template-columns:1fr;}
+  .vid-list{flex-direction:row;overflow-x:auto;scrollbar-width:none;}
+  .vid-list::-webkit-scrollbar{display:none;}
+  .vid-item{min-width:180px;}
+  .fashion-modal{margin:0 12px;max-width:100%;}
+  .nav-outer{padding:10px 16px;}
+  .breaking-band{padding:9px 16px;}
+  .hero-stats{gap:8px;}
+  .stat-pill{padding:7px 12px;}
+  .stat-lbl{display:none;}
+  .nl-wrap{margin:0 16px 52px;padding:32px 22px;}
+  .nl-title{font-size:26px;}
+  .three{grid-template-columns:1fr;padding:36px 16px;}
+  .articles{padding:0 16px;}
+  .sec{padding:44px 16px 0;}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ MOBILE MENU ═══ -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" onclick="closeMobileMenu()">✕</button>
+  <a href="#" onclick="closeMobileMenu()">BTS</a>
+  <a href="#" onclick="closeMobileMenu()">K-Pop</a>
+  <a href="#" onclick="closeMobileMenu()">K-Drama</a>
+  <a href="#" onclick="closeMobileMenu()">Fashion</a>
+  <a href="#" onclick="closeMobileMenu()">Awards</a>
+  <a href="#" onclick="closeMobileMenu()">BTS × India</a>
+  <a href="#" onclick="closeMobileMenu()">About</a>
+</div>
+
+<!-- ═══ FASHION MODAL (fixed overlay) ═══ -->
+<div class="fashion-modal-overlay" id="fashionModal" onclick="closeFashionModal(event)">
+  <div class="fashion-modal" id="fashionModalBox">
+    <button class="fm-close" onclick="closeFashionModal()">✕</button>
+    <div class="fm-artist" id="fm-artist"></div>
+    <div class="fm-title" id="fm-title"></div>
+    <div class="fm-pills" id="fm-pills"></div>
+    <p class="fm-desc" id="fm-desc"></p>
+    <div class="fm-where">Where to Find</div>
+    <a class="fm-btn primary" id="fm-link1" href="#" target="_blank" rel="noopener"></a>
+    <a class="fm-btn secondary" id="fm-link2" href="#" target="_blank" rel="noopener"></a>
+  </div>
+</div>
+
+<!-- ═══ NAV ═══ -->
+<header class="nav-outer">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#">
+      <div class="nav-logo-mark"><span>IK</span></div>
+      <span class="nav-logo-text">IK<b>×</b>Seoul</span>
+    </a>
+    <nav class="nav-pill">
+      <a href="#stories" class="active">BTS</a>
+      <a href="#stories">K-Pop</a>
+      <a href="#dramas">K-Drama</a>
+      <a href="#fashion">Fashion</a>
+      <a href="#awards">Awards</a>
+      <a href="#stories">BTS × India</a>
+      <a href="#about">About</a>
+    </nav>
+    <div class="nav-right">
+      <input class="nav-search" type="text" placeholder="Search…"/>
+      <button class="nav-subscribe" onclick="scrollToSection('newsletter')">Subscribe</button>
+      <button class="nav-hamburger" onclick="openMobileMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ═══ BREAKING NEWS BAND ═══ -->
+<div class="breaking-band">
+  <div class="breaking-inner">
+    <span class="breaking-tag"><span class="breaking-live-dot"></span>Breaking</span>
+    <div class="breaking-scroll">
+      <div class="breaking-track">
+        {% for item in breaking_news %}
+        <span class="breaking-item">{{ item }} &nbsp;·&nbsp;</span>
+        {% endfor %}
+        <span class="breaking-item">BTS 2026 Full Comeback Confirmed — All 7 Members Together Again &nbsp;·&nbsp;</span>
+        <span class="breaking-item">Stray Kids "MIROH" World Tour — India Dates: Mumbai Aug 14 &amp; Delhi Aug 16 &nbsp;·&nbsp;</span>
+        <span class="breaking-item">aespa Wins MAMA 2026 Best Female Group Daesang &nbsp;·&nbsp;</span>
+        <span class="breaking-item">NewJeans Hit 2 Billion Spotify Streams — Fastest K-pop Act Ever &nbsp;·&nbsp;</span>
+        <span class="breaking-item">SEVENTEEN Break Billboard 200 Record — February 2026 &nbsp;·&nbsp;</span>
+        <span class="breaking-item">BLACKPINK India Tour 2026 — Mumbai &amp; Delhi Confirmed &nbsp;·&nbsp;</span>
+        <span class="breaking-item">BTS 2026 Full Comeback Confirmed — All 7 Members Together Again &nbsp;·&nbsp;</span>
+        <span class="breaking-item">Stray Kids "MIROH" World Tour — India Dates: Mumbai Aug 14 &amp; Delhi Aug 16 &nbsp;·&nbsp;</span>
+        <span class="breaking-item">aespa Wins MAMA 2026 Best Female Group Daesang &nbsp;·&nbsp;</span>
+        <span class="breaking-item">NewJeans Hit 2 Billion Spotify Streams — Fastest K-pop Act Ever &nbsp;·&nbsp;</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ TICKER ═══ -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    {% for item in ticker_items %}
+    <span class="ticker-item"><em>✦</em>{{ item }}</span>
+    {% endfor %}
+    <span class="ticker-item"><em>✦</em>Jennie "Ruby" Sequel Drops April 2026</span>
+    <span class="ticker-item"><em>✦</em>ARMY India Fan Fest 2026 — Hyderabad March 22</span>
+    <span class="ticker-item"><em>✦</em>Squid Game Season 3 — February 2026 Netflix</span>
+    <span class="ticker-item"><em>✦</em>aespa "Supernova" MV Crosses 1B YouTube Views</span>
+    <span class="ticker-item"><em>✦</em>Golden Disc 2026 — Stray Kids Win Album Daesang</span>
+    <span class="ticker-item"><em>✦</em>BTS FESTA 2026 Schedule Announced</span>
+    <span class="ticker-item"><em>✦</em>SEVENTEEN Win AMA 2026 Favourite K-Pop Artist</span>
+    <span class="ticker-item"><em>✦</em>NewJeans × Spotify India Campaign Live</span>
+    <span class="ticker-item"><em>✦</em>RIIZE Debut World Tour Kicks Off March 2026</span>
+    <span class="ticker-item"><em>✦</em>Jennie "Ruby" Sequel Drops April 2026</span>
+    <span class="ticker-item"><em>✦</em>ARMY India Fan Fest 2026 — Hyderabad March 22</span>
+    <span class="ticker-item"><em>✦</em>Squid Game Season 3 — February 2026 Netflix</span>
+    <span class="ticker-item"><em>✦</em>aespa "Supernova" MV Crosses 1B YouTube Views</span>
+    <span class="ticker-item"><em>✦</em>Golden Disc 2026 — Stray Kids Win Album Daesang</span>
+    <span class="ticker-item"><em>✦</em>BTS FESTA 2026 Schedule Announced</span>
+    <span class="ticker-item"><em>✦</em>SEVENTEEN Win AMA 2026 Favourite K-Pop Artist</span>
+    <span class="ticker-item"><em>✦</em>NewJeans × Spotify India Campaign Live</span>
+  </div>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero fade-up in">
+  <div class="hero-eyeline">
+    <span class="hero-eyeline-line"></span>
+    <span class="hero-eyeline-text">K-Pop · Korean Culture · India</span>
+    <span class="hero-eyeline-line"></span>
+  </div>
+  <h1 class="hero-title">
+    Where <em>Seoul</em><br>Speaks to India
+    <span class="hero-title-row2">BTS · BLACKPINK · K-Drama · Fashion · 2026</span>
+  </h1>
+  <div class="hero-byline">
+    <div style="text-align:right;">
+      <div class="hero-byline-name">Itishree Khadiratna</div>
+      <div class="hero-byline-role">Seoul Correspondent</div>
+    </div>
+    <div class="hero-byline-divider"></div>
+    <div>
+      <div class="hero-byline-name">Daily since 2026</div>
+      <div class="hero-byline-role">India's #1 K-culture blog</div>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat-pill"><div class="stat-icon si-rose">♥</div><span class="stat-val">18K+</span><span class="stat-lbl">Monthly Readers</span></div>
+    <div class="stat-pill"><div class="stat-icon si-green">✦</div><span class="stat-val">500+</span><span class="stat-lbl">Articles in 2026</span></div>
+    <div class="stat-pill"><div class="stat-icon si-blue">▶</div><span class="stat-val">Daily</span><span class="stat-lbl">K-Pop Updates</span></div>
+    <div class="stat-pill"><div class="stat-icon si-purple">🏆</div><span class="stat-val">17+</span><span class="stat-lbl">Artists Covered</span></div>
+  </div>
+  <div class="hero-btns">
+    <button class="btn-filled" onclick="scrollToSection('stories')">Latest Comebacks</button>
+    <button class="btn-rose" onclick="scrollToSection('awards')">Awards 2026</button>
+    <button class="btn-ghost" onclick="scrollToSection('artists')">Explore Artists</button>
+    <button class="btn-ghost" onclick="scrollToSection('fashion')">Trending Fashion</button>
+  </div>
+  <div class="mosaic">
+    <div class="mc" style="width:150px;height:210px;transform:rotate(-3.5deg);">
+      <svg width="150" height="210" viewBox="0 0 150 210"><rect width="150" height="210" fill="#0f0f23"/><text x="75" y="102" text-anchor="middle" font-size="44" fill="#E8526A" font-family="serif">방탄</text><text x="75" y="140" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.45)" font-family="sans-serif">BTS · 2026</text></svg>
+      <div class="mc-label">BTS · Back Together</div>
+    </div>
+    <div class="mc" style="width:168px;height:192px;">
+      <svg width="168" height="192" viewBox="0 0 168 192"><rect width="168" height="192" fill="#1c0a1c"/><text x="84" y="90" text-anchor="middle" font-size="32" fill="#E8526A" font-family="serif">블랙핑크</text><text x="84" y="128" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.4)" font-family="sans-serif">BLACKPINK · India</text></svg>
+      <div class="mc-label">BLACKPINK · India 2026</div>
+    </div>
+    <div class="mc" style="width:156px;height="200px;transform:rotate(1deg);">
+      <svg width="156" height="200" viewBox="0 0 156 200"><rect width="156" height="200" fill="#0a1628"/><text x="78" y="90" text-anchor="middle" font-size="32" fill="#7eb8f7" font-family="serif">한국</text><text x="78" y="128" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.4)" font-family="sans-serif">Korean Culture</text></svg>
+      <div class="mc-label">K-Culture · India</div>
+    </div>
+    <div class="mc" style="width:145px;height:185px;transform:rotate(-2deg);">
+      <svg width="145" height="185" viewBox="0 0 145 185"><rect width="145" height="185" fill="#1a0a14"/><text x="72" y="84" text-anchor="middle" font-size="27" fill="#E8526A" font-family="serif">드라마</text><text x="72" y="120" text-anchor="middle" font-size="11" fill="rgba(255,255,255,0.4)" font-family="sans-serif">K-Drama 2026</text></svg>
+      <div class="mc-label">K-Drama · Reviews</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FEATURED ARTISTS ═══ -->
+<div class="sec fade-up" id="artists" style="padding-bottom:18px;">
+  <div class="sec-label">✦ 2026 Active Artists</div>
+  <h2 class="sec-title">Featured <em>Groups</em></h2>
+</div>
+<div class="artists-strip fade-up" style="padding-bottom:18px;">
+  <div class="artist-chip"><div class="artist-chip-dot" style="background:#4A4AE8;">방</div><span>BTS</span></div>
+  <div class="artist-chip"><div class="artist-chip-dot" style="background:#E84AB5;">BP</div><span>BLACKPINK</span></div>
+  <div class="artist-chip"><div class="artist-chip-dot" style="background:#1A9E6A;">NJ</div><span>NewJeans</span></div>
+  <div class="artist-chip"><div class="artist-chip-dot" style="background:#E8526A;">SK</div><span>Stray Kids</span></div>
+  <div class="artist-chip"><div class="artist-chip-dot" style="background:#7C3AED;">17</div><span>SEVENTEEN</span></div>
+  <div class="artist-chip"><div class="artist-chip-dot" style="background:#3B82F6;">AZ</div><span>ATEEZ</span></div>
+  <div class="artist-chip"><div class="artist-chip-dot" style="background:#F59E0B;">LS</div><span>LE SSERAFIM</span></div>
+  <div class="artist-chip"><div class="artist-chip-dot" style="background:#06B6D4;">ae</div><span>aespa</span></div>
+  <div class="artist-chip"><div class="artist-chip-dot" style="background:#8B5CF6;">EN</div><span>ENHYPEN</span></div>
+  <div class="artist-chip"><div class="artist-chip-dot" style="background:#EC4899;">TX</div><span>TXT</span></div>
+  <div class="artist-chip"><div class="artist-chip-dot" style="background:#14B8A6;">RZ</div><span>RIIZE</span></div>
+  <div class="artist-chip"><div class="artist-chip-dot" style="background:#F97316;">BM</div><span>BABYMONSTER</span></div>
+  <div class="artist-chip"><div class="artist-chip-dot" style="background:#EF4444;">IU</div><span>IU</span></div>
+  <div class="artist-chip"><div class="artist-chip-dot" style="background:#6366F1;">RV</div><span>Red Velvet</span></div>
+  <div class="artist-chip"><div class="artist-chip-dot" style="background:#D97706;">TW</div><span>TWICE</span></div>
+</div>
+
+<!-- ═══ ARTICLES ═══ -->
+<div class="divider fade-up"><hr/></div>
+<div class="sec fade-up" id="stories" style="padding-bottom:0;">
+  <div class="sec-label">✦ Latest Stories · 2026</div>
+  <h2 class="sec-title">Fresh from <em>the Feed</em></h2>
+</div>
+<div class="cats fade-up">
+  <button class="cat on">All</button><button class="cat">BTS</button><button class="cat">BLACKPINK</button>
+  <button class="cat">K-Drama</button><button class="cat">Korean Culture</button><button class="cat">BTS × India</button>
+  <button class="cat">Reviews</button><button class="cat">Daily News</button><button class="cat">Awards</button><button class="cat">Fashion</button>
+</div>
+<div class="articles fade-up">
+  {% for story in stories %}
+  <div class="card{% if story.featured %} wide{% endif %}">
+    <div>
+      <div class="card-cat">✦ {{ story.category }}</div>
+      <h2 class="card-title{% if story.featured %} card-title-lg{% endif %}">{{ story.title }}</h2>
+      <p class="card-excerpt">{{ story.excerpt }}</p>
+      <div class="card-meta">{{ story.created_at|date:"F Y" }} <span class="card-meta-dot">·</span> {{ story.read_time }}</div>
+      <div class="card-tags">{% for tag in story.tag_list %}<span class="card-tag">{{ tag }}</span>{% endfor %}</div>
+    </div>
+    {% if story.featured %}<div class="card-img" style="height:230px;"><strong>{{ story.emoji }}</strong></div>{% endif %}
+  </div>
+  {% endfor %}
+  <div class="card wide">
+    <div>
+      <div class="card-cat">✦ BTS × India — 2026 Editor's Pick</div>
+      <h2 class="card-title card-title-lg">All 7 Members Reunite: BTS 2026 Full Comeback Is Finally Here</h2>
+      <p class="card-excerpt">After completing military service, all seven members of BTS have officially confirmed their 2026 full-group comeback. ARMY India is already trending #1 globally — here's everything we know about the new album, tour dates, and India stops.</p>
+      <div class="card-meta">Itishree Khadiratna <span class="card-meta-dot">·</span> May 2026 <span class="card-meta-dot">·</span> 14 min read</div>
+      <div class="card-tags"><span class="card-tag">BTS</span><span class="card-tag purple">2026 Comeback</span><span class="card-tag green">India</span></div>
+      <button class="read-btn">Read Article →</button>
+    </div>
+    <div class="card-img" style="height:230px;background:linear-gradient(135deg,#0f0f23,#1a1a3e);border-radius:14px;">
+      <svg width="100" height="100" viewBox="0 0 100 100"><text x="50" y="68" text-anchor="middle" font-size="56">💜</text></svg>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-cat">✦ BLACKPINK · 2026</div>
+    <h2 class="card-title">Jennie's "Ruby" Sequel — Full Tracklist & What to Expect</h2>
+    <p class="card-excerpt" style="font-size:13.5px;">The BLACKPINK member's highly anticipated second solo era is here. We break down every confirmed detail, the producers involved, and what Indian Blinks are most excited about.</p>
+    <div class="card-meta">April 2026 <span class="card-meta-dot">·</span> 5 min read</div>
+    <div class="card-tags"><span class="card-tag">BLACKPINK</span><span class="card-tag blue">Solo 2026</span></div>
+  </div>
+  <div class="card">
+    <div class="card-cat">✦ K-Drama · 2026</div>
+    <h2 class="card-title">Best K-Dramas of 2026 — Ranked by Indian Fans</h2>
+    <p class="card-excerpt" style="font-size:13.5px;">From "When the Stars Gossip S2" to "Love Next Door S2" — the 2026 K-drama lineup is the strongest in years. Our full ranked list with streaming details.</p>
+    <div class="card-meta">April 2026 <span class="card-meta-dot">·</span> 8 min read</div>
+    <div class="card-tags"><span class="card-tag purple">K-Drama</span><span class="card-tag green">Netflix</span></div>
+  </div>
+  <div class="card">
+    <div class="card-cat">✦ Korean Culture · 2026</div>
+    <h2 class="card-title">Why 2026 Is the Biggest Year for Korean Culture in India</h2>
+    <p class="card-excerpt" style="font-size:13.5px;">10 million Indians now actively learning Korean — and K-pop concert venues sell out in minutes. The wave has never been stronger. A full data-driven look.</p>
+    <div class="card-meta">March 2026 <span class="card-meta-dot">·</span> 7 min read</div>
+    <div class="card-tags"><span class="card-tag green">India</span><span class="card-tag">Culture</span></div>
+  </div>
+</div>
+
+<!-- ═══ FASHION SLIDESHOW ═══ -->
+<div class="divider fade-up"><hr/></div>
+<div class="fashion-section fade-up" id="fashion">
+  <div class="fashion-header">
+    <div>
+      <div class="sec-label">✦ 2026 K-Fashion Live</div>
+      <h2 class="sec-title">Viral Looks & <em>Runway Moments</em></h2>
+      <p class="sec-sub" style="margin-top:8px;">Click any outfit to see brand details &amp; where to shop</p>
+    </div>
+    <button class="btn-ghost" style="flex-shrink:0;">View All →</button>
+  </div>
+  <div class="fashion-track-wrap">
+    <div class="fashion-track" id="fashionTrack">
+      {% for look in fashion_looks %}
+      <div class="fashion-card" onclick="openFashionModal('{{ look.artist|escapejs }}','{{ look.title|escapejs }}',['{{ look.brand|escapejs }}'],'{{ look.description|escapejs }}','{{ look.shop_text|escapejs }}','{{ look.shop_url|escapejs }}','','')">
+        <div class="fashion-card-img" style="background:linear-gradient(135deg,#0f0f23,#2d1b69);">
+          <span class="fashion-card-emoji">{{ look.emoji }}</span>
+          <span class="fashion-card-badge fc-new">{{ look.badge }}</span>
+        </div>
+        <div class="fashion-card-info">
+          <div class="fashion-card-artist">{{ look.artist }}</div>
+          <div class="fashion-card-name">{{ look.title }}</div>
+          <div class="fashion-card-brand">{{ look.brand }}</div>
+        </div>
+      </div>
+      {% endfor %}
+
+      <div class="fashion-card" onclick="openFashionModal('V (BTS)','Celine Oversized Wool Coat',['Celine Paris','Winter 2026','Streetwear'],'V was spotted at Paris Fashion Week Jan 2026 wearing this structured oversized charcoal wool coat — the piece sold out globally within 48 hours of the airport sighting. Paired with Celine combat boots and wide-leg tailored trousers.','Shop at Celine.com →','https://www.celine.com','Similar styles on Farfetch →','https://www.farfetch.com')">
+        <div class="fashion-card-img" style="background:linear-gradient(135deg,#0f0f23,#2d1b69);">
+          <span class="fashion-card-emoji">🕴️</span>
+          <span class="fashion-card-badge fc-viral">🔥 Viral</span>
+        </div>
+        <div class="fashion-card-info">
+          <div class="fashion-card-artist">V (BTS)</div>
+          <div class="fashion-card-name">Celine Oversized Coat</div>
+          <div class="fashion-card-brand">Celine Paris · Winter 2026</div>
+        </div>
+      </div>
+
+      <div class="fashion-card" onclick="openFashionModal('Jennie (BLACKPINK)','Chanel Tweed Mini Dress',['Chanel','Spring/Summer 2026','Stage Look'],'Jennie\'s Chanel ambassador look from Seoul Fashion Week 2026 — a bold pink tweed mini paired with white kitten heels. Worn on the &quot;Ruby&quot; sequel promotional shoot, it instantly became the most-pinned fashion moment of Q1 2026.','Shop at Chanel.com →','https://www.chanel.com','Luxury dupes on SSENSE →','https://www.ssense.com')">
+        <div class="fashion-card-img" style="background:linear-gradient(135deg,#1c0014,#4a0030);">
+          <span class="fashion-card-emoji">👗</span>
+          <span class="fashion-card-badge fc-viral">🔥 Viral</span>
+        </div>
+        <div class="fashion-card-info">
+          <div class="fashion-card-artist">Jennie (BLACKPINK)</div>
+          <div class="fashion-card-name">Chanel Tweed Mini Dress</div>
+          <div class="fashion-card-brand">Chanel · Spring 2026</div>
+        </div>
+      </div>
+
+      <div class="fashion-card" onclick="openFashionModal('Hanni (NewJeans)','Nike × NewJeans Y2K Collab Sneaker',['Nike','Limited Edition 2026','Y2K Aesthetic'],'NewJeans\' 2026 Nike collaboration produced this pastel Y2K-inspired low-top sneaker in mint and white. Hanni fronted the campaign and wore them at the 2026 Grammy pre-party. The drop sold out in 11 minutes globally.','Shop at Nike.com →','https://www.nike.com','Rare sizes on StockX →','https://www.stockx.com')">
+        <div class="fashion-card-img" style="background:linear-gradient(135deg,#001a14,#004d3a);">
+          <span class="fashion-card-emoji">👟</span>
+          <span class="fashion-card-badge fc-new">New 2026</span>
+        </div>
+        <div class="fashion-card-info">
+          <div class="fashion-card-artist">Hanni (NewJeans)</div>
+          <div class="fashion-card-name">Nike × NewJeans Sneaker</div>
+          <div class="fashion-card-brand">Nike Special Edition · 2026</div>
+        </div>
+      </div>
+
+      <div class="fashion-card" onclick="openFashionModal('Felix (Stray Kids)','Louis Vuitton SS26 Monogram Blouson',['Louis Vuitton','Spring/Summer 2026','Stage Wear'],'Felix wore this exclusive LV monogram blouson jacket at the Stray Kids 2026 &quot;MIROH&quot; World Tour opener in Seoul. As LV ambassador, Felix co-designed the stage wardrobe for the tour. The brown-on-cream pattern became iconic overnight.','Shop at louisvuitton.com →','https://www.louisvuitton.com','Similar at Mytheresa →','https://www.mytheresa.com')">
+        <div class="fashion-card-img" style="background:linear-gradient(135deg,#1a0800,#4d1800);">
+          <span class="fashion-card-emoji">🧥</span>
+          <span class="fashion-card-badge fc-viral">🔥 Viral</span>
+        </div>
+        <div class="fashion-card-info">
+          <div class="fashion-card-artist">Felix (Stray Kids)</div>
+          <div class="fashion-card-name">Louis Vuitton SS26 Jacket</div>
+          <div class="fashion-card-brand">Louis Vuitton · Spring 2026</div>
+        </div>
+      </div>
+
+      <div class="fashion-card" onclick="openFashionModal('Karina (aespa)','Givenchy Cyber Couture Two-Piece Set',['Givenchy','Cyber Collection 2026','Stage Outfit'],'Karina\'s 2026 MAMA Award performance outfit in Givenchy\'s Cyber Couture line — a silver-toned structured crop and column skirt — felt like a perfect match for aespa\'s futuristic aesthetic. Givenchy confirmed Karina as brand ambassador in January 2026.','Shop at Givenchy.com →','https://www.givenchy.com','Net-A-Porter alternatives →','https://www.net-a-porter.com')">
+        <div class="fashion-card-img" style="background:linear-gradient(135deg,#0a0a2e,#1e1b4b);">
+          <span class="fashion-card-emoji">✨</span>
+          <span class="fashion-card-badge fc-new">New 2026</span>
+        </div>
+        <div class="fashion-card-info">
+          <div class="fashion-card-artist">Karina (aespa)</div>
+          <div class="fashion-card-name">Givenchy Cyber Couture Set</div>
+          <div class="fashion-card-brand">Givenchy · 2026 Cyber Collection</div>
+        </div>
+      </div>
+
+      <div class="fashion-card" onclick="openFashionModal('RM (BTS)','Prada Pre-Fall 2026 Tailored Set',['Prada','Pre-Fall 2026','Airport OOTD'],'RM arrived at Incheon Airport ahead of the BTS 2026 comeback press conference in this beautifully tailored Prada two-piece — a caramel brown oversized blazer with wide trousers. #RMxPrada trended worldwide within 30 minutes.','Shop at Prada.com →','https://www.prada.com','Browse Farfetch for similar →','https://www.farfetch.com')">
+        <div class="fashion-card-img" style="background:linear-gradient(135deg,#1a1a00,#3d3d00);">
+          <span class="fashion-card-emoji">👔</span>
+          <span class="fashion-card-badge fc-viral">🔥 Viral</span>
+        </div>
+        <div class="fashion-card-info">
+          <div class="fashion-card-artist">RM (BTS)</div>
+          <div class="fashion-card-name">Prada Airport Look</div>
+          <div class="fashion-card-brand">Prada · Pre-Fall 2026</div>
+        </div>
+      </div>
+
+      <div class="fashion-card" onclick="openFashionModal('Lisa (BLACKPINK)','BVLGARI × Lisa Fine Jewellery Collection',['BVLGARI','Collab 2026','Fine Jewellery'],'Lisa\'s 2026 BVLGARI collaboration features 12 pieces of fine jewellery co-designed by Lisa, blending Thai and Italian craftsmanship. The debut piece — a serpent necklace in rose gold — sold out in 4 minutes globally.','Shop at Bulgari.com →','https://www.bulgari.com','Net-A-Porter fine jewellery →','https://www.net-a-porter.com')">
+        <div class="fashion-card-img" style="background:linear-gradient(135deg,#14001e,#3d0055);">
+          <span class="fashion-card-emoji">💎</span>
+          <span class="fashion-card-badge fc-beauty">Beauty</span>
+        </div>
+        <div class="fashion-card-info">
+          <div class="fashion-card-artist">Lisa (BLACKPINK)</div>
+          <div class="fashion-card-name">BVLGARI Stage Jewels</div>
+          <div class="fashion-card-brand">BVLGARI × Lisa · 2026</div>
+        </div>
+      </div>
+
+      <div class="fashion-card" onclick="openFashionModal('Mingyu (SEVENTEEN)','Dior Men FW 2026 Runway Look',['Dior Men','FW 2026','Paris Runway'],'Mingyu walked the Dior Men FW 2026 runway in Paris — the first SEVENTEEN member to open a Paris couture show. The look: a midnight navy wool overcoat with hand-stitched lapels and custom Dior loafers. Most-searched look from Paris Men\'s Fashion Week 2026.','Shop at Dior.com →','https://www.dior.com','Mr Porter luxury alternatives →','https://www.mrporter.com')">
+        <div class="fashion-card-img" style="background:linear-gradient(135deg,#001428,#003566);">
+          <span class="fashion-card-emoji">🧣</span>
+          <span class="fashion-card-badge fc-new">New 2026</span>
+        </div>
+        <div class="fashion-card-info">
+          <div class="fashion-card-artist">Mingyu (SEVENTEEN)</div>
+          <div class="fashion-card-name">Dior Men Winter Look</div>
+          <div class="fashion-card-brand">Dior Men · FW 2026</div>
+        </div>
+      </div>
+
+      <!-- Duplicate set for seamless loop -->
+      <div class="fashion-card" onclick="openFashionModal('V (BTS)','Celine Oversized Wool Coat',['Celine Paris','Winter 2026','Streetwear'],'V was spotted at Paris Fashion Week Jan 2026 wearing this structured oversized charcoal wool coat — sold out globally within 48 hours.','Shop at Celine.com →','https://www.celine.com','Similar styles on Farfetch →','https://www.farfetch.com')">
+        <div class="fashion-card-img" style="background:linear-gradient(135deg,#0f0f23,#2d1b69);"><span class="fashion-card-emoji">🕴️</span><span class="fashion-card-badge fc-viral">🔥 Viral</span></div>
+        <div class="fashion-card-info"><div class="fashion-card-artist">V (BTS)</div><div class="fashion-card-name">Celine Oversized Coat</div><div class="fashion-card-brand">Celine Paris · Winter 2026</div></div>
+      </div>
+      <div class="fashion-card" onclick="openFashionModal('Jennie (BLACKPINK)','Chanel Tweed Mini Dress',['Chanel','Spring 2026','Stage Look'],'Jennie\'s Chanel ambassador look from Seoul Fashion Week 2026 — a bold pink tweed mini paired with white kitten heels.','Shop at Chanel.com →','https://www.chanel.com','Luxury dupes on SSENSE →','https://www.ssense.com')">
+        <div class="fashion-card-img" style="background:linear-gradient(135deg,#1c0014,#4a0030);"><span class="fashion-card-emoji">👗</span><span class="fashion-card-badge fc-viral">🔥 Viral</span></div>
+        <div class="fashion-card-info"><div class="fashion-card-artist">Jennie (BLACKPINK)</div><div class="fashion-card-name">Chanel Tweed Mini Dress</div><div class="fashion-card-brand">Chanel · Spring 2026</div></div>
+      </div>
+      <div class="fashion-card" onclick="openFashionModal('Hanni (NewJeans)','Nike × NewJeans Y2K Collab Sneaker',['Nike','Limited 2026','Y2K'],'NewJeans\' 2026 Nike collaboration — pastel Y2K-inspired low-top in mint and white.','Shop at Nike.com →','https://www.nike.com','Rare sizes on StockX →','https://www.stockx.com')">
+        <div class="fashion-card-img" style="background:linear-gradient(135deg,#001a14,#004d3a);"><span class="fashion-card-emoji">👟</span><span class="fashion-card-badge fc-new">New 2026</span></div>
+        <div class="fashion-card-info"><div class="fashion-card-artist">Hanni (NewJeans)</div><div class="fashion-card-name">Nike × NewJeans Sneaker</div><div class="fashion-card-brand">Nike · 2026</div></div>
+      </div>
+      <div class="fashion-card" onclick="openFashionModal('Felix (Stray Kids)','Louis Vuitton SS26 Monogram Blouson',['Louis Vuitton','SS26','Stage Wear'],'Felix wore this exclusive LV monogram blouson at the Stray Kids 2026 MIROH World Tour opener in Seoul.','Shop at louisvuitton.com →','https://www.louisvuitton.com','Similar at Mytheresa →','https://www.mytheresa.com')">
+        <div class="fashion-card-img" style="background:linear-gradient(135deg,#1a0800,#4d1800);"><span class="fashion-card-emoji">🧥</span><span class="fashion-card-badge fc-viral">🔥 Viral</span></div>
+        <div class="fashion-card-info"><div class="fashion-card-artist">Felix (Stray Kids)</div><div class="fashion-card-name">Louis Vuitton SS26 Jacket</div><div class="fashion-card-brand">Louis Vuitton · Spring 2026</div></div>
+      </div>
+      <div class="fashion-card" onclick="openFashionModal('Karina (aespa)','Givenchy Cyber Couture Two-Piece Set',['Givenchy','Cyber 2026','Stage'],'Karina\'s MAMA 2026 performance outfit — silver-toned structured crop and column skirt in Givenchy Cyber Couture.','Shop at Givenchy.com →','https://www.givenchy.com','Net-A-Porter →','https://www.net-a-porter.com')">
+        <div class="fashion-card-img" style="background:linear-gradient(135deg,#0a0a2e,#1e1b4b);"><span class="fashion-card-emoji">✨</span><span class="fashion-card-badge fc-new">New 2026</span></div>
+        <div class="fashion-card-info"><div class="fashion-card-artist">Karina (aespa)</div><div class="fashion-card-name">Givenchy Cyber Couture Set</div><div class="fashion-card-brand">Givenchy · 2026</div></div>
+      </div>
+      <div class="fashion-card" onclick="openFashionModal('RM (BTS)','Prada Pre-Fall 2026 Tailored Set',['Prada','Pre-Fall 2026','Airport'],'RM\'s airport look ahead of the BTS 2026 comeback press conference — caramel Prada blazer and wide trousers. Trended worldwide in 30 minutes.','Shop at Prada.com →','https://www.prada.com','Browse Farfetch →','https://www.farfetch.com')">
+        <div class="fashion-card-img" style="background:linear-gradient(135deg,#1a1a00,#3d3d00);"><span class="fashion-card-emoji">👔</span><span class="fashion-card-badge fc-viral">🔥 Viral</span></div>
+        <div class="fashion-card-info"><div class="fashion-card-artist">RM (BTS)</div><div class="fashion-card-name">Prada Airport Look</div><div class="fashion-card-brand">Prada · Pre-Fall 2026</div></div>
+      </div>
+      <div class="fashion-card" onclick="openFashionModal('Lisa (BLACKPINK)','BVLGARI × Lisa Fine Jewellery',['BVLGARI','Collab 2026','Jewellery'],'Lisa\'s 2026 BVLGARI collab — 12 fine jewellery pieces co-designed by Lisa. Serpent necklace sold out in 4 minutes.','Shop at Bulgari.com →','https://www.bulgari.com','Net-A-Porter →','https://www.net-a-porter.com')">
+        <div class="fashion-card-img" style="background:linear-gradient(135deg,#14001e,#3d0055);"><span class="fashion-card-emoji">💎</span><span class="fashion-card-badge fc-beauty">Beauty</span></div>
+        <div class="fashion-card-info"><div class="fashion-card-artist">Lisa (BLACKPINK)</div><div class="fashion-card-name">BVLGARI Stage Jewels</div><div class="fashion-card-brand">BVLGARI × Lisa · 2026</div></div>
+      </div>
+      <div class="fashion-card" onclick="openFashionModal('Mingyu (SEVENTEEN)','Dior Men FW 2026 Runway Look',['Dior Men','FW 2026','Paris Runway'],'Mingyu opened the Dior Men FW 2026 runway in Paris — midnight navy overcoat, hand-stitched lapels, custom Dior loafers.','Shop at Dior.com →','https://www.dior.com','Mr Porter →','https://www.mrporter.com')">
+        <div class="fashion-card-img" style="background:linear-gradient(135deg,#001428,#003566);"><span class="fashion-card-emoji">🧣</span><span class="fashion-card-badge fc-new">New 2026</span></div>
+        <div class="fashion-card-info"><div class="fashion-card-artist">Mingyu (SEVENTEEN)</div><div class="fashion-card-name">Dior Men Winter Look</div><div class="fashion-card-brand">Dior Men · FW 2026</div></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══ AWARDS 2026 ═══ -->
+<div class="divider fade-up"><hr/></div>
+<div class="sec fade-up" id="awards" style="padding-bottom:28px;">
+  <div class="sec-label">✦ Awards & Milestones · 2026</div>
+  <h2 class="sec-title">2026 <em>Wins</em> & Records</h2>
+</div>
+<div class="awards-bento fade-up">
+  <div class="award-card wide">
+    <span class="award-icon">🏆</span>
+    <div class="award-name">✦ MAMA Awards 2026 — Grand Prize</div>
+    <div class="award-title">{{ site_settings.award_title|default:'Featured award coming soon' }}</div>
+    <div class="award-meta">{{ site_settings.award_meta }}</div>
+    <div class="award-list">
+      {% for item in award_bullets %}<div class="award-list-item"><span class="award-list-dot"></span>{{ item }}</div>{% endfor %}
+      <div class="award-list-item"><span class="award-list-dot"></span>Best Male Group — SEVENTEEN</div>
+      <div class="award-list-item"><span class="award-list-dot"></span>Best Female Group — aespa</div>
+      <div class="award-list-item"><span class="award-list-dot"></span>Best New Artist — BABYMONSTER</div>
+    </div>
+  </div>
+  <div class="award-card">
+    <span class="award-icon">📊</span>
+    <div class="award-name">✦ Billboard 2026</div>
+    <div class="award-counter">3</div>
+    <div class="award-counter-label">K-pop acts in Billboard Hot 100 Top 10 simultaneously — new record, March 2026</div>
+  </div>
+  <div class="award-card">
+    <span class="award-icon">🎵</span>
+    <div class="award-name">✦ Spotify Milestone 2026</div>
+    <div class="award-title">NewJeans Hit <em>2 Billion Streams</em></div>
+    <div class="award-meta">Fastest K-pop act to cross the milestone</div>
+  </div>
+  <div class="award-card">
+    <span class="award-icon">▶️</span>
+    <div class="award-name">✦ YouTube 2026</div>
+    <div class="award-title">aespa "Supernova" MV Crosses <em>1 Billion Views</em></div>
+    <div class="award-meta">January 2026 · Reached in 8 months</div>
+  </div>
+  <div class="award-card">
+    <span class="award-icon">🌟</span>
+    <div class="award-name">✦ Golden Disc 2026</div>
+    <div class="award-title">Stray Kids Win Album Daesang — <em>3 Years Running</em></div>
+    <div class="award-meta">Best Album: "MIROH" · January 2026</div>
+  </div>
+  <div class="award-card">
+    <span class="award-icon">🎤</span>
+    <div class="award-name">✦ AMA 2026</div>
+    <div class="award-title">SEVENTEEN Win <em>Favourite K-Pop Artist</em></div>
+    <div class="award-meta">November 2026 · Microsoft Theater, LA</div>
+  </div>
+</div>
+
+<!-- ═══ CHARTS ═══ -->
+<div class="divider fade-up"><hr/></div>
+<div class="sec fade-up" style="padding-bottom:28px;">
+  <div class="sec-label">✦ Charts & Streaming · 2026</div>
+  <h2 class="sec-title">2026 <em>Music</em> Tracker</h2>
+</div>
+<div class="charts-grid fade-up">
+  <div class="chart-card">
+    <div class="chart-head"><div class="chart-head-title">Spotify Global Top K-pop</div><span class="chart-badge live">● Live 2026</span></div>
+    {% for entry in spotify_entries %}<div class="chart-row"><span class="chart-rank">{{ entry.rank }}</span><div class="chart-icon">{{ entry.emoji }}</div><div class="chart-info"><div class="chart-song">{{ entry.title }}</div><div class="chart-artist">{{ entry.artist }}</div></div><div class="chart-bar-wrap"><div class="chart-bar" style="width:{{ entry.meter }}%;"></div></div><div class="chart-stat">{{ entry.stat }}</div></div>{% endfor %}
+    <div class="chart-row"><span class="chart-rank">1</span><div class="chart-icon" style="background:#0f0f23;">💜</div><div class="chart-info"><div class="chart-song">Yet To Come (2026 Remaster)</div><div class="chart-artist">BTS</div></div><div class="chart-bar-wrap"><div class="chart-bar" style="width:95%;"></div></div><div class="chart-stat chart-up">↑1 · 42M</div></div>
+    <div class="chart-row"><span class="chart-rank">2</span><div class="chart-icon" style="background:#1c0014;">🖤</div><div class="chart-info"><div class="chart-song">Flower (Ruby Era Mix)</div><div class="chart-artist">Jennie</div></div><div class="chart-bar-wrap"><div class="chart-bar" style="width:84%;"></div></div><div class="chart-stat chart-up">↑3 · 38M</div></div>
+    <div class="chart-row"><span class="chart-rank">3</span><div class="chart-icon" style="background:#001a14;">🎵</div><div class="chart-info"><div class="chart-song">Supernatural</div><div class="chart-artist">NewJeans</div></div><div class="chart-bar-wrap"><div class="chart-bar" style="width:76%;"></div></div><div class="chart-stat">→ 31M</div></div>
+    <div class="chart-row"><span class="chart-rank">4</span><div class="chart-icon" style="background:#0a0a2e;">⚡</div><div class="chart-info"><div class="chart-song">Supernova (2026 Live Ver.)</div><div class="chart-artist">aespa</div></div><div class="chart-bar-wrap"><div class="chart-bar" style="width:68%;"></div></div><div class="chart-stat chart-up">↑2 · 28M</div></div>
+    <div class="chart-row"><span class="chart-rank">5</span><div class="chart-icon" style="background:#1a0800;">🎸</div><div class="chart-info"><div class="chart-song">MIROH (Tour Edition)</div><div class="chart-artist">Stray Kids</div></div><div class="chart-bar-wrap"><div class="chart-bar" style="width:61%;"></div></div><div class="chart-stat">→ 24M</div></div>
+  </div>
+  <div class="chart-card">
+    <div class="chart-head"><div class="chart-head-title">Billboard Hot 100 · K-pop</div><span class="chart-badge">May 2026</span></div>
+    {% for entry in billboard_entries %}<div class="chart-row"><span class="chart-rank">{{ entry.rank }}</span><div class="chart-icon">{{ entry.emoji }}</div><div class="chart-info"><div class="chart-song">{{ entry.title }}</div><div class="chart-artist">{{ entry.artist }}</div></div><div class="chart-bar-wrap"><div class="chart-bar" style="width:{{ entry.meter }}%;"></div></div><div class="chart-stat">{{ entry.stat }}</div></div>{% endfor %}
+    <div class="chart-row"><span class="chart-rank">4</span><div class="chart-icon" style="background:#0f0f23;">💜</div><div class="chart-info"><div class="chart-song">Comeback Single (2026)</div><div class="chart-artist">BTS</div></div><div class="chart-bar-wrap"><div class="chart-bar" style="width:90%;"></div></div><div class="chart-stat chart-up">↑ Peak #1</div></div>
+    <div class="chart-row"><span class="chart-rank">11</span><div class="chart-icon" style="background:#001428;">🌊</div><div class="chart-info"><div class="chart-song">Fear</div><div class="chart-artist">SEVENTEEN</div></div><div class="chart-bar-wrap"><div class="chart-bar" style="width:74%;"></div></div><div class="chart-stat chart-up">New Entry</div></div>
+    <div class="chart-row"><span class="chart-rank">18</span><div class="chart-icon" style="background:#1c0014;">🌸</div><div class="chart-info"><div class="chart-song">Chanel (Ruby)</div><div class="chart-artist">Jennie</div></div><div class="chart-bar-wrap"><div class="chart-bar" style="width:65%;"></div></div><div class="chart-stat">→ Wk 3</div></div>
+    <div class="chart-row"><span class="chart-rank">23</span><div class="chart-icon" style="background:#1a0800;">🔥</div><div class="chart-info"><div class="chart-song">Miroh World</div><div class="chart-artist">Stray Kids</div></div><div class="chart-bar-wrap"><div class="chart-bar" style="width:55%;"></div></div><div class="chart-stat chart-up">↑5</div></div>
+    <div class="chart-row"><span class="chart-rank">31</span><div class="chart-icon" style="background:#001a14;">💚</div><div class="chart-info"><div class="chart-song">Ditto (2026 Remix)</div><div class="chart-artist">NewJeans</div></div><div class="chart-bar-wrap"><div class="chart-bar" style="width:46%;"></div></div><div class="chart-stat">→ Wk 7</div></div>
+  </div>
+</div>
+
+<!-- ═══ VIDEO ═══ -->
+<div class="video-section fade-up" style="margin-top:72px;">
+  <div class="video-inner">
+    <div class="video-top">
+      <div>
+        <div class="sec-label">✦ Now Playing · 2026</div>
+        <h2 class="sec-title">Watch. <em>React.</em> Repeat.</h2>
+        <p class="sec-sub">Handpicked 2026 MVs, comeback stages &amp; live concert moments — curated for the Indian ARMY.</p>
+      </div>
+      <div class="live-badge"><span class="live-dot"></span>Live Picks 2026</div>
+    </div>
+    <div class="video-layout">
+      <div class="vid-list">
+        {% for video in videos %}<div class="vid-item{% if forloop.first %} sel{% endif %}" onclick="loadVid('{{ video.youtube_id|escapejs }}',this)">
+          <div class="vid-play"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div>
+          <div class="vid-cat">{{ video.category }}</div><div class="vid-title">{{ video.title }}</div><div class="vid-meta">{{ video.meta }}</div>
+        </div>{% endfor %}
+        <div class="vid-item sel" onclick="loadVid('BVwAVbKYYeM',this)">
+          <div class="vid-play"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div>
+          <div class="vid-cat">✦ BTS · 2026 Comeback</div>
+          <div class="vid-title">Dynamite — 2026 Comeback Stage</div>
+          <div class="vid-meta">All 7 Members · #1 Worldwide</div>
+        </div>
+        <div class="vid-item" onclick="loadVid('gdZLi9oWNZg',this)">
+          <div class="vid-play"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div>
+          <div class="vid-cat">✦ BTS</div>
+          <div class="vid-title">Boy With Luv ft. Halsey</div>
+          <div class="vid-meta">1.5B views · Classic</div>
+        </div>
+        <div class="vid-item" onclick="loadVid('eTsmit8ZqLY',this)">
+          <div class="vid-play"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div>
+          <div class="vid-cat">✦ BLACKPINK</div>
+          <div class="vid-title">How You Like That</div>
+          <div class="vid-meta">800M views</div>
+        </div>
+        <div class="vid-item" onclick="loadVid('WPdWvnAAurg',this)">
+          <div class="vid-play"><svg viewBox="0 0 10 10"><polygon points="2,1 9,5 2,9"/></svg></div>
+          <div class="vid-cat">✦ BLACKPINK</div>
+          <div class="vid-title">Pink Venom — MV</div>
+          <div class="vid-meta">580M views</div>
+        </div>
+      </div>
+      <div class="vid-player">
+        <iframe id="yt-player" src="https://www.youtube.com/embed/{{ featured_video.youtube_id|default:'BVwAVbKYYeM' }}?autoplay=1&mute=1&controls=1&rel=0&modestbranding=1" title="Featured video" allow="autoplay;encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ K-DRAMA ═══ -->
+<div class="divider fade-up"><hr/></div>
+<div class="sec fade-up" id="dramas" style="padding-bottom:28px;">
+  <div class="sec-label">✦ K-Drama · 2026</div>
+  <h2 class="sec-title">Currently <em>Watching</em></h2>
+</div>
+<div class="kdrama-grid fade-up">
+  {% for drama in dramas %}<div class="kdrama-card"><div class="kdrama-thumb">{{ drama.emoji }}</div><div class="kdrama-body"><div class="kdrama-status">{{ drama.status }}</div><div class="kdrama-title">{{ drama.title }}</div><div class="kdrama-meta">{{ drama.meta }}</div></div></div>{% endfor %}
+  <div class="kdrama-card">
+    <div class="kdrama-thumb" style="background:linear-gradient(135deg,#0f172a,#1e3a5f);">🌊</div>
+    <div class="kdrama-body"><div class="kdrama-status airing">● Airing Now</div><div class="kdrama-title">When the Stars Gossip S2</div><div class="kdrama-meta">Netflix · 2026 · Space Romance</div></div>
+  </div>
+  <div class="kdrama-card">
+    <div class="kdrama-thumb" style="background:linear-gradient(135deg,#1c0a1c,#4a0050);">💜</div>
+    <div class="kdrama-body"><div class="kdrama-status airing">● Airing Now</div><div class="kdrama-title">Love Next Door S2</div><div class="kdrama-meta">tvN · 2026 · Romantic Comedy</div></div>
+  </div>
+  <div class="kdrama-card">
+    <div class="kdrama-thumb" style="background:linear-gradient(135deg,#1a0800,#4a1800);">🔥</div>
+    <div class="kdrama-body"><div class="kdrama-status upcoming">◎ Upcoming</div><div class="kdrama-title">My Melo My Marble</div><div class="kdrama-meta">Disney+ · July 2026 · Fantasy</div></div>
+  </div>
+  <div class="kdrama-card">
+    <div class="kdrama-thumb" style="background:linear-gradient(135deg,#0a2a0a,#1a4a1a);">🌿</div>
+    <div class="kdrama-body"><div class="kdrama-status completed">✓ Completed</div><div class="kdrama-title">Queen of Tears S2</div><div class="kdrama-meta">Netflix · 2026 · 9.4★</div></div>
+  </div>
+</div>
+
+<!-- ═══ THREE COL ═══ -->
+<div class="three fade-up">
+  <div class="tc">
+    <div class="tc-num">01</div>
+    <div class="tc-cat">✦ Daily News · 2026</div>
+    <div class="tc-title">BTS FESTA 2026: All 7 Members — Full Schedule Revealed</div>
+    <p class="tc-text">The most anticipated FESTA in BTS history — Jin is back, all 7 confirmed, and global ARMY is already counting down.</p>
+  </div>
+  <div class="tc">
+    <div class="tc-num">02</div>
+    <div class="tc-cat">✦ India · 2026</div>
+    <div class="tc-title">BLACKPINK India 2026 Tour — Tickets, Venues & Complete Guide</div>
+    <p class="tc-text">Mumbai and Delhi confirmed for the BLACKPINK 2026 World Tour. Full ticket guide, venue details, and tips for Indian Blinks.</p>
+  </div>
+  <div class="tc">
+    <div class="tc-num">03</div>
+    <div class="tc-cat">✦ Culture · 2026</div>
+    <div class="tc-title">10 Million Indians Now Learning Korean — The 2026 Data Report</div>
+    <p class="tc-text">New 2026 data shows K-pop drove a 340% rise in Korean language learning apps in India since 2022. Full breakdown inside.</p>
+  </div>
+</div>
+
+<!-- ═══ ABOUT ═══ -->
+<div class="divider fade-up"><hr/></div>
+<div class="about-wrap fade-up" id="about" style="padding-top:72px;">
+  <div class="about-grid">
+    <div class="about-dark">
+      <div>
+        <div class="about-name">Itishree<br><em>Khadiratna</em></div>
+        <div class="about-handle">@itishree.ik · Seoul Correspondent · 2026</div>
+      </div>
+      <div class="about-tags">
+        <span class="a-tag hot">ARMY</span><span class="a-tag hot">Blink</span>
+        <span class="a-tag">K-Drama Addict</span><span class="a-tag">Culture Writer</span><span class="a-tag">India × Korea</span>
+      </div>
+    </div>
+    <div>
+      <div class="about-quote">"Korean culture didn't just give me music — it gave me a whole world."</div>
+      <p class="about-body">Hi, I'm Itishree — a writer, blogger, and unapologetic K-culture obsessive based in India. Since launching this space, it's grown into a home for thousands of Indian ARMYs and Blinks. In 2026, with BTS returning and the Korean wave bigger than ever in India, every article, review, fashion breakdown, and award tracker here is written with one goal — to bring Seoul a little closer to you.</p>
+      <div class="chips">
+        <span class="chip">BTS 2026</span><span class="chip">BLACKPINK</span><span class="chip">NewJeans</span>
+        <span class="chip">Stray Kids</span><span class="chip">aespa</span><span class="chip">K-Food</span>
+        <span class="chip">Hangul</span><span class="chip">K-Cinema</span><span class="chip">SEVENTEEN</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ NEWSLETTER ═══ -->
+<div class="nl-wrap fade-up" id="newsletter">
+  <div class="nl-inner">
+    <div>
+      <div class="nl-eyebrow">✦ Free Weekly Newsletter · 2026</div>
+      <h2 class="nl-title">Don't Miss a<br>Single <em>K-Pop Drop</em></h2>
+      <p class="nl-tagline">Every Sunday — 2026 comeback alerts, K-drama drops, BTS updates, fashion picks &amp; exclusive India fan coverage.</p>
+    </div>
+    <div>
+      <div class="nl-form">
+        <input class="nl-input" type="email" placeholder="your@email.com" id="nl-in"/>
+        {% csrf_token %}
+        <button class="nl-btn" id="nl-go">Subscribe →</button>
+      </div>
+      <div class="nl-perks">
+        <div class="nl-perk"><div class="nl-perk-dot">✦</div>Weekly BTS 2026 comeback roundup</div>
+        <div class="nl-perk"><div class="nl-perk-dot">♥</div>K-drama reviews &amp; streaming guides</div>
+        <div class="nl-perk"><div class="nl-perk-dot">◎</div>BTS in India exclusives &amp; fan events</div>
+      </div>
+      <div class="nl-note">No spam. Unsubscribe anytime. 보라해 💜</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="footer-top">
+    <div>
+      <div class="ft-logo">IK<span>×</span>Seoul</div>
+      <p class="ft-tagline">Your daily 2026 dose of BTS, BLACKPINK, K-drama, awards &amp; Korean culture — through an Indian lens. Written by Itishree Khadiratna.</p>
+      <div class="ft-social">
+        <a class="ft-soc-btn" href="#" title="Instagram">Ig</a>
+        <a class="ft-soc-btn" href="#" title="X">𝕏</a>
+        <a class="ft-soc-btn" href="#" title="YouTube">▶</a>
+        <a class="ft-soc-btn" href="#" title="TikTok">♪</a>
+      </div>
+    </div>
+    <div>
+      <div class="ft-col-title">Explore 2026</div>
+      <div class="ft-links">
+        <a href="#">BTS Comeback 2026</a>
+        <a href="#">BLACKPINK India Tour</a>
+        <a href="#">K-Drama Rankings</a>
+        <a href="#">Daily K-Pop News</a>
+        <a href="#">Awards 2026</a>
+      </div>
+    </div>
+    <div>
+      <div class="ft-col-title">Topics</div>
+      <div class="ft-links">
+        <a href="#">Korean Culture</a>
+        <a href="#">BTS in India</a>
+        <a href="#">K-Fashion 2026</a>
+        <a href="#">Music Charts</a>
+        <a href="#">Fan Events India</a>
+      </div>
+    </div>
+    <div>
+      <div class="ft-col-title">About</div>
+      <div class="ft-links">
+        <a href="#">About Itishree</a>
+        <a href="#">Newsletter</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Itishree Khadiratna · All rights reserved · IK×Seoul</span>
+    <span class="footer-love">Made with <span>♥</span> for Indian ARMYs &amp; Blinks · 보라해 💜</span>
+  </div>
+</footer>
+
+<script>
+/* ── Nav ── */
+document.querySelectorAll('.nav-pill a').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    document.querySelectorAll('.nav-pill a').forEach(x=>x.classList.remove('active'));
+    a.classList.add('active');
+  });
+});
+/* ── Mobile menu ── */
+function openMobileMenu(){document.getElementById('mobileMenu').classList.add('open');document.body.style.overflow='hidden';}
+function closeMobileMenu(){document.getElementById('mobileMenu').classList.remove('open');document.body.style.overflow='';}
+function scrollToSection(id){document.getElementById(id)?.scrollIntoView({behavior:'smooth'});}
+/* ── Category pills ── */
+document.querySelectorAll('.cat').forEach(b=>{
+  b.addEventListener('click',()=>{
+    document.querySelectorAll('.cat').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on');
+    const category=b.textContent.trim().toLowerCase();
+    document.querySelectorAll('.articles .card').forEach(card=>{
+      card.style.display=category==='all'||card.textContent.toLowerCase().includes(category)?'':'none';
+    });
+  });
+});
+/* ── Video ── */
+function loadVid(id,el){
+  document.getElementById('yt-player').src=`https://www.youtube.com/embed/${id}?autoplay=1&controls=1&rel=0&modestbranding=1`;
+  document.querySelectorAll('.vid-item').forEach(x=>x.classList.remove('sel'));
+  el.classList.add('sel');
+}
+/* ── Fashion modal ── */
+function openFashionModal(artist,title,pillsArr,desc,link1text,link1url,link2text,link2url){
+  document.getElementById('fm-artist').textContent = artist;
+  document.getElementById('fm-title').textContent = title;
+  // Pills
+  const pillsEl = document.getElementById('fm-pills');
+  pillsEl.innerHTML = '';
+  pillsArr.forEach((p,i)=>{
+    const s = document.createElement('span');
+    s.className = 'fm-pill'+(i>0?' dark':'');
+    s.textContent = p;
+    pillsEl.appendChild(s);
+  });
+  document.getElementById('fm-desc').innerHTML = desc;
+  const l1 = document.getElementById('fm-link1');
+  l1.textContent = link1text; l1.href = link1url;
+  const l2 = document.getElementById('fm-link2');
+  l2.textContent = link2text; l2.href = link2url;
+  document.getElementById('fashionModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  // Pause track
+  document.getElementById('fashionTrack').classList.add('paused');
+}
+function closeFashionModal(e){
+  if(e && e.target !== document.getElementById('fashionModal')) return;
+  document.getElementById('fashionModal').classList.remove('open');
+  document.body.style.overflow = '';
+  document.getElementById('fashionTrack').classList.remove('paused');
+}
+document.querySelector('.fm-close').addEventListener('click',()=>{
+  document.getElementById('fashionModal').classList.remove('open');
+  document.body.style.overflow='';
+  document.getElementById('fashionTrack').classList.remove('paused');
+});
+/* ── Newsletter ── */
+document.getElementById('nl-go').addEventListener('click',async ()=>{
+  const v=document.getElementById('nl-in').value.trim();
+  if(v){
+    const body = new URLSearchParams({email:v});
+    const response = await fetch("{% url 'main:subscribe' %}", {method:'POST',headers:{'X-CSRFToken':document.querySelector('[name=csrfmiddlewaretoken]').value},body});
+    if(response.ok){
+      document.getElementById('nl-go').textContent="You're in!";
+      document.getElementById('nl-go').style.background='#1A9E6A';
+      document.getElementById('nl-in').value='';
+    }
+  }
+});
+/* ── Scroll fade ── */
+const obs=new IntersectionObserver(es=>{
+  es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});
+},{threshold:.06});
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
